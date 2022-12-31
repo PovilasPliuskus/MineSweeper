@@ -8,7 +8,17 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Title="MineSweeper" Height="275" Width="200" Icon="images/icon.ico">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <Menu>
+            <MenuItem Header="New Game">
+                <MenuItem Header="Begginer"/>
+                <MenuItem Header="Advanced"/>
+                <MenuItem Header="Expert"/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About"/>
+                <MenuItem Header="Rules"/>
+            </MenuItem>
+        </Menu>
+    </DockPanel>
 </Window>
