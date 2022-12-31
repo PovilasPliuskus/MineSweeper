@@ -8,7 +8,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Title="MineSweeper" Height="275" Width="200" Icon="images/icon.ico">
-    <DockPanel>
+    <StackPanel>
         <Menu>
             <MenuItem Header="New Game">
                 <MenuItem Header="Begginer"/>
@@ -20,5 +20,33 @@
                 <MenuItem Header="Rules"/>
             </MenuItem>
         </Menu>
-    </DockPanel>
+        <Border BorderThickness="2">
+            <StackPanel>
+                <TextBlock Text="Bombs left: "/>
+                <TextBlock Text="Time: "/>
+            </StackPanel>
+        </Border>
+        <Grid Name="ContentGrid" ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </StackPanel>
 </Window>

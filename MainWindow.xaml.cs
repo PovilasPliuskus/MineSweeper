@@ -23,6 +23,24 @@ namespace MineSweeper
         public MainWindow()
         {
             InitializeComponent();
+
+            int count = 1;
+
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    Button MyControl = new Button();
+                    MyControl.Content = count.ToString();
+                    MyControl.Name = "Button" + count.ToString();
+
+                    Grid.SetColumn(MyControl, j);
+                    Grid.SetRow(MyControl, i);
+                    ContentGrid.Children.Add(MyControl);
+
+                    count++;
+                }
+            }
         }
     }
 }
