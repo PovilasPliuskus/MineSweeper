@@ -23,24 +23,35 @@ namespace MineSweeper
         public MainWindow()
         {
             InitializeComponent();
+            CreateGrid(8);
+        }
 
+        void CreateGrid(int gameMode)
+        {
             int count = 1;
 
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < gameMode; i++)
             {
-                for (int j = 0; j < 8; j++)
+                ColumnDefinition columnDefinition = new ColumnDefinition();
+                gameGrid.ColumnDefinitions.Add(columnDefinition);
+                for (int j = 0; j < gameMode; j++)
                 {
-                    Button MyControl = new Button();
-                    MyControl.Content = count.ToString();
-                    MyControl.Name = "Button" + count.ToString();
+                    RowDefinition rowDefinition = new RowDefinition();
+                    gameGrid.RowDefinitions.Add(rowDefinition);
 
-                    Grid.SetColumn(MyControl, j);
-                    Grid.SetRow(MyControl, i);
-                    ContentGrid.Children.Add(MyControl);
+                    Button button = new Button();
+                    button.Content = count.ToString();
+                    button.Name = "button" + count.ToString();
+
+                    Grid.SetColumn(button, j);
+                    Grid.SetRow(button, i);
+                    gameGrid.Children.Add(button);
 
                     count++;
                 }
             }
         }
     }
+
+
 }
