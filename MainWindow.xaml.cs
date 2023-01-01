@@ -23,7 +23,7 @@ namespace MineSweeper
         public MainWindow()
         {
             InitializeComponent();
-            CreateGrid(8);
+            CreateGrid(24);
         }
 
         void CreateGrid(int gameMode)

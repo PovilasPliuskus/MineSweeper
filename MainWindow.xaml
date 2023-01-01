@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Title="MineSweeper" Height="275" Width="200" Icon="images/icon.ico">
+        Title="MineSweeper" Width="Auto" Height="Auto" SizeToContent="WidthAndHeight" Icon="images/icon.ico">
     <StackPanel>
         <Menu>
             <MenuItem Header="New Game">
@@ -26,6 +26,8 @@
                 <TextBlock Text="Time: "/>
             </StackPanel>
         </Border>
-        <Grid Name="gameGrid" ShowGridLines="True" />
+        <Border BorderThickness="10">
+            <Grid Name="gameGrid"/>
+        </Border>
     </StackPanel>
 </Window>
