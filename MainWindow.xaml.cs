@@ -23,11 +23,20 @@ namespace MineSweeper
         public MainWindow()
         {
             InitializeComponent();
-            CreateGrid(24);
+            CreateGrid(8);
+        }
+
+        void ClearGrid()
+        {
+            gameGrid.Children.Clear();
+            gameGrid.RowDefinitions.Clear();
+            gameGrid.ColumnDefinitions.Clear();
         }
 
         void CreateGrid(int gameMode)
         {
+            ClearGrid();
+
             int count = 1;
 
             for (int i = 0; i < gameMode; i++)
@@ -50,6 +59,21 @@ namespace MineSweeper
                     count++;
                 }
             }
+        }
+
+        private void Begginer_Click(object sender, RoutedEventArgs e)
+        {
+            CreateGrid(8);
+        }
+
+        private void Advanced_Click(object sender, RoutedEventArgs e)
+        {
+            CreateGrid(16);
+        }
+
+        private void Expert_Click(object sender, RoutedEventArgs e)
+        {
+            CreateGrid(24);
         }
     }
 

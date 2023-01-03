@@ -11,9 +11,9 @@
     <StackPanel>
         <Menu>
             <MenuItem Header="New Game">
-                <MenuItem Header="Begginer"/>
-                <MenuItem Header="Advanced"/>
-                <MenuItem Header="Expert"/>
+                <MenuItem Header="Begginer" x:Name="Begginer" Click="Begginer_Click "/>
+                <MenuItem Header="Advanced" x:Name="Advanced" Click="Advanced_Click"/>
+                <MenuItem Header="Expert" x:Name="Expert" Click="Expert_Click"/>
             </MenuItem>
             <MenuItem Header="Help">
                 <MenuItem Header="About"/>
@@ -27,7 +27,7 @@
             </StackPanel>
         </Border>
         <Border BorderThickness="10">
-            <Grid Name="gameGrid"/>
+            <Grid Name="gameGrid" Margin="0 0 0 10"/>
         </Border>
     </StackPanel>
 </Window>
